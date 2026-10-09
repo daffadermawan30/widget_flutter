@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
               FontTextWidget(),
               SizedBox(height: 40),
               SpacingTextWidget(),
+              SizedBox(height: 40),
+              DecorationTextWidget(),
             ],
           ),
         ),
@@ -101,6 +103,50 @@ class SpacingTextWidget extends StatelessWidget {
         Text(
           'Line 1\nLine 2\nLine 3',
           style: TextStyle(fontSize: 20, height: 2, color: Colors.pink),
+        ),
+      ],
+    );
+  }
+}
+
+class DecorationTextWidget extends StatelessWidget {
+  const DecorationTextWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Underline',
+          style: TextStyle(fontSize: 20, decoration: TextDecoration.underline),
+        ),
+
+        SizedBox(height: 15),
+
+        Text(
+          'Line Through',
+          style: TextStyle(
+            fontSize: 20,
+            decoration: TextDecoration.lineThrough,
+          ),
+        ),
+
+        SizedBox(height: 15),
+
+        Text(
+          'Background',
+          style: TextStyle(fontSize: 20, backgroundColor: Colors.yellow),
+        ),
+
+        SizedBox(height: 15),
+
+        Text(
+          'Text Shadow',
+          style: TextStyle(
+            fontSize: 30,
+            shadows: [Shadow(offset: Offset(3, 3), blurRadius: 5)],
+          ),
         ),
       ],
     );
