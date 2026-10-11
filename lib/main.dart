@@ -10,10 +10,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('MyTitle', style: TextStyle(fontWeight: FontWeight.bold)),
-          backgroundColor: Colors.blue,
+          title: Text(
+            'Tentang Saya',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1,
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: Colors.blueGrey,
         ),
         body: const Center(
           child: Column(
@@ -21,9 +29,9 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               FontTextWidget(),
-              SizedBox(height: 40),
+              SizedBox(height: 15),
               SpacingTextWidget(),
-              SizedBox(height: 40),
+              SizedBox(height: 15),
               DecorationTextWidget(),
             ],
           ),
@@ -41,27 +49,33 @@ class FontTextWidget extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Normal', style: TextStyle(fontSize: 20, color: Colors.black)),
         Text(
-          'Bold',
+          'Kenalin, saya',
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 16,
+            color: Colors.blueGrey,
+          ),
+        ),
+        Text(
+          'Daffa Dermawan',
+          style: TextStyle(
+            fontSize: 26,
             fontWeight: FontWeight.bold,
+            color: Colors.blueGrey,
+          ),
+        ),
+        Text(
+          'Mahasiswa Teknik Informatika',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
             color: Colors.blue,
           ),
         ),
         Text(
-          'Semi Bold',
+          'Lagi belajar jadi developer.',
           style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-            color: Colors.indigo,
-          ),
-        ),
-        Text(
-          'Italic',
-          style: TextStyle(
-            fontSize: 20,
+            fontSize: 14,
             fontStyle: FontStyle.italic,
             color: Colors.deepPurple,
           ),
@@ -80,29 +94,39 @@ class SpacingTextWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Normal Text',
-          style: TextStyle(fontSize: 20, color: Colors.black),
+          'Sedikit tentang saya',
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Colors.blueGrey,
+          ),
         ),
-
-        SizedBox(height: 20),
-
+        SizedBox(height: 8),
         Text(
-          'Letter Spacing',
-          style: TextStyle(fontSize: 20, letterSpacing: 5, color: Colors.teal),
+          'Saya suka ngulik coding.',
+          style: TextStyle(
+            fontSize: 18,
+            letterSpacing: 1,
+            color: Colors.black,
+          ),
         ),
-
-        SizedBox(height: 20),
-
+        SizedBox(height: 8),
         Text(
-          'Word Spacing Example',
-          style: TextStyle(fontSize: 20, wordSpacing: 10, color: Colors.orange),
+          'Belajar, prakti, dan error >:(',
+          style: TextStyle(
+            fontSize: 15,
+            wordSpacing: 2,
+            color: Colors.teal,
+          ),
         ),
-
-        SizedBox(height: 20),
-
+        SizedBox(height: 8),
         Text(
-          'Line 1\nLine 2\nLine 3',
-          style: TextStyle(fontSize: 20, height: 2, color: Colors.pink),
+          'Sekarang lagi belajar flutter.\nuntuk isi waktu gabut dan mengerjakan tugas kuliah.',
+          style: TextStyle(
+            fontSize: 14,
+            height: 1.4,
+            color: Colors.blueGrey,
+          ),
         ),
       ],
     );
@@ -118,34 +142,54 @@ class DecorationTextWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Underline',
-          style: TextStyle(fontSize: 20, decoration: TextDecoration.underline),
-        ),
-
-        SizedBox(height: 15),
-
-        Text(
-          'Line Through',
+          'Yang sedang dipelajari saat ini:',
           style: TextStyle(
-            fontSize: 20,
-            decoration: TextDecoration.lineThrough,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Colors.blueGrey,
+            decoration: TextDecoration.underline,
           ),
         ),
-
-        SizedBox(height: 15),
-
+        SizedBox(height: 8),
         Text(
-          'Background',
-          style: TextStyle(fontSize: 20, backgroundColor: Colors.yellow),
-        ),
-
-        SizedBox(height: 15),
-
-        Text(
-          'Text Shadow',
+          'Mobile (flutter), Web (express dan laravel)',
           style: TextStyle(
-            fontSize: 30,
-            shadows: [Shadow(offset: Offset(3, 3), blurRadius: 5)],
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          'Masih banyak yang belum saya pahami.',
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.blueGrey,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          'Tapi saya tetap belajar.',
+          style: TextStyle(
+            fontSize: 16,
+            backgroundColor: Colors.yellow,
+            color: Colors.black,
+          ),
+        ),
+        SizedBox(height: 8),
+        Text(
+          'meskipun progressnya belum keliatan \nsampe sekarang :> ',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.deepPurple,
+            shadows: [
+              Shadow(
+                offset: Offset(2, 2),
+                blurRadius: 4,
+                color: Colors.purple,
+              ),
+            ],
           ),
         ),
       ],
