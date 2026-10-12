@@ -21,18 +21,18 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: Colors.red.shade700,
         ),
         body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              FontTextWidget(),
+              FontWid(),
               SizedBox(height: 15),
-              SpacingTextWidget(),
+              SpacingWid(),
               SizedBox(height: 15),
-              DecorationTextWidget(),
+              DecorationWid(),
             ],
           ),
         ),
@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class FontTextWidget extends StatelessWidget {
-  const FontTextWidget({super.key});
+class FontWid extends StatelessWidget {
+  const FontWid({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +51,7 @@ class FontTextWidget extends StatelessWidget {
       children: [
         Text(
           'Kenalin, saya',
-          style: TextStyle(
-            fontSize: 16,
-            color: Colors.blueGrey,
-          ),
+          style: TextStyle(fontSize: 16, color: Colors.blueGrey),
         ),
         Text(
           'Daffa Dermawan',
@@ -85,8 +82,8 @@ class FontTextWidget extends StatelessWidget {
   }
 }
 
-class SpacingTextWidget extends StatelessWidget {
-  const SpacingTextWidget({super.key});
+class SpacingWid extends StatelessWidget {
+  const SpacingWid({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -104,37 +101,25 @@ class SpacingTextWidget extends StatelessWidget {
         SizedBox(height: 8),
         Text(
           'Saya suka ngulik coding.',
-          style: TextStyle(
-            fontSize: 18,
-            letterSpacing: 1,
-            color: Colors.black,
-          ),
+          style: TextStyle(fontSize: 18, letterSpacing: 1, color: Colors.black),
         ),
         SizedBox(height: 8),
         Text(
-          'Belajar, prakti, dan error >:(',
-          style: TextStyle(
-            fontSize: 15,
-            wordSpacing: 2,
-            color: Colors.teal,
-          ),
+          'Belajar, praktik, dan error >:(',
+          style: TextStyle(fontSize: 15, wordSpacing: 2, color: Colors.teal),
         ),
         SizedBox(height: 8),
         Text(
           'Sekarang lagi belajar flutter.\nuntuk isi waktu gabut dan mengerjakan tugas kuliah.',
-          style: TextStyle(
-            fontSize: 14,
-            height: 1.4,
-            color: Colors.blueGrey,
-          ),
+          style: TextStyle(fontSize: 14, height: 1.4, color: Colors.blueGrey),
         ),
       ],
     );
   }
 }
 
-class DecorationTextWidget extends StatelessWidget {
-  const DecorationTextWidget({super.key});
+class DecorationWid extends StatelessWidget {
+  const DecorationWid({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -162,10 +147,7 @@ class DecorationTextWidget extends StatelessWidget {
         SizedBox(height: 8),
         Text(
           'Masih banyak yang belum saya pahami.',
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.blueGrey,
-          ),
+          style: TextStyle(fontSize: 14, color: Colors.blueGrey),
         ),
         SizedBox(height: 8),
         Text(
@@ -184,11 +166,7 @@ class DecorationTextWidget extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: Colors.deepPurple,
             shadows: [
-              Shadow(
-                offset: Offset(2, 2),
-                blurRadius: 4,
-                color: Colors.purple,
-              ),
+              Shadow(offset: Offset(2, 2), blurRadius: 4, color: Colors.purple),
             ],
           ),
         ),
